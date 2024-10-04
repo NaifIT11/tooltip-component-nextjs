@@ -11,7 +11,7 @@ const TooltipProvider = ({children} : ChildrenProps) => {
 }
 
 const TooltipTrigger = ({children} : ChildrenProps) => {
-    return <div className="tooltip-trigger">{children}</div>
+    return <div className="tooltip-trigger" aria-label="Tooltip Trigger">{children}</div>
 }
 
 const TooltipContent = ({children} : ChildrenProps) => {
