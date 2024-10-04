@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <TooltipProvider>
       <TooltipTrigger>
-        <p>hover me</p>
+        <button>hover me</button>
       </TooltipTrigger>
       <TooltipContent>
         this is tooltip content
