@@ -1,8 +1,15 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { TooltipContent, TooltipProvider, TooltipTrigger } from "./components/Tooltip";
+
 
 export default function Home() {
   return (
-    <h1>hello</h1>
+    <TooltipProvider>
+      <TooltipTrigger>
+        <p>hover me</p>
+      </TooltipTrigger>
+      <TooltipContent>
+        this is tooltip content
+      </TooltipContent>
+    </TooltipProvider>
   );
 }

@@ -2,3 +2,43 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+
+
+.tooltip-provider{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+
+.tooltip-trigger{
+  cursor: pointer;
+}
+
+[role="tooltip"]{
+  position: absolute;
+  top: -6rem;
+  left: -1rem;
+  padding: 1rem;
+  border-radius: 0.125rem;
+  background-color: antiquewhite;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    translate: -50% -50%;
+    width: 20px;
+    height: 20px;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 9999px;
+    background-color: antiquewhite;
+  }
+  box-shadow: 0.125rem 0.125rem 0.3rem antiquewhite;
+  display: none;
+}
+
+.tooltip-provider:has(.tooltip-trigger:hover) [role="tooltip"]{
+  display: block;
+}
